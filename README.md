@@ -1,12 +1,15 @@
 # sqlite3-base64
 
-Add BASE64 encoding function to sqlite3.
+Add base-64 encoding & decoding functions to SQLite3:
+
+- `BASE64`
+- `BLOBFROMBASE64`
 
 **LICENSE:** UNLICENSE (public domain) ref: <http://unlicense.org/>
 
 ## External dependencies
 
-- `cencode.h`, `cencode.c` from <http://libb64.sourceforge.net/> (public domain)
+- `cencode.h`, `cencode.c`, `cdecode.h`, `cdecode.c` from <http://libb64.sourceforge.net/> (public domain)
 - `sqlite3.h`
 
 **NOTE:** `cencode.h` must be in the build path.
@@ -28,3 +31,11 @@ returns the following value _ending with a newline (`\n`)_:
 ```
 AQID
 ```
+
+And the following SQL:
+
+```sql
+SELECT HEX(BLOBFROMBASE64('AQID'))
+```
+
+returns the following value: `010203`
