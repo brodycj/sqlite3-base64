@@ -24,4 +24,7 @@ Then the following SQL:
 SELECT BASE64(X'010203')
 ```
 
-returns the following value: `AQID`
+returns the following value _ending with a newline (`\n`)_:
+```
+AQID
+```
