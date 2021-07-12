@@ -11,7 +11,7 @@ void sqlite3_base64(sqlite3_context * context, int argc, sqlite3_value ** argv) 
     sqlite3_result_null(context);
   } else {
     // THANKS FOR GUIDANCE:
-    // http://www.sqlite.org/cgi/src/artifact/43916c1d8e6da5d1
+    // https://www.sqlite.org/cgi/src/artifact/43916c1d8e6da5d1
     // (src/func.c:hexFunc)
     sqlite3_value * first = argv[0];
 
