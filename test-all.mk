@@ -7,6 +7,8 @@ test-all: all-test-dependencies
 	./test-base64-encode.out
 	cc test-blobfrombase64.c sqlite3_base64.c $(TEST_SQLITE3) $(TEST_LIBB64_CENCODE) $(TEST_LIBB64_CDECODE) $(TEST_INCLUDE_FLAGS) -o test-blobfrombase64.out
 	./test-blobfrombase64.out
+	cc test-blobfrombase64-pattern1.c sqlite3_base64.c $(TEST_SQLITE3) $(TEST_LIBB64_CENCODE) $(TEST_LIBB64_CDECODE) $(TEST_INCLUDE_FLAGS) -o test-blobfrombase64-pattern1.out
+	./test-blobfrombase64-pattern1.out
 
 test-clean: clean-test-dependencies
 	rm -rf ./test*.out
