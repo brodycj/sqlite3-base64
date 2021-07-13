@@ -6,7 +6,7 @@ Add BASE64 encoding function to sqlite3.
 
 ## External dependencies
 
-- `cencode.h`, `cencode.c` from <http://libb64.sourceforge.net/> (public domain)
+- `cencode.h`, `cencode.c` from <https://github.com/gorb314/libb64> or a fork such as <https://github.com/brodybits/libb64-core> (public domain)
 - `sqlite3.h`
 
 **NOTE:** `cencode.h` must be in the build path.
