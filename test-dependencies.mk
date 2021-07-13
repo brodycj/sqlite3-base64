@@ -2,9 +2,11 @@ SQLITE_AMALGAMATION_ROOT := sqlite-amalgamation-3360000
 SQLITE_AMALGAMATION_ZIP := $(SQLITE_AMALGAMATION_ROOT).zip
 SQLITE_AMALGAMATION_URL := https://sqlite.org/2021/$(SQLITE_AMALGAMATION_ZIP)
 
-LIBB64_ROOT := libb64-1.2.1
-LIBB64_ZIP := $(LIBB64_ROOT).zip
-LIBB64_URL := https://sourceforge.net/projects/libb64/files/libb64/libb64/$(LIBB64_ZIP)
+LIBB64_BASE_NAME := libb64
+LIBB64_RELEASE_NAME := Release-1.2.1
+LIBB64_ROOT := $(LIBB64_BASE_NAME)-$(LIBB64_RELEASE_NAME)
+LIBB64_ZIP := $(LIBB64_RELEASE_NAME).zip
+LIBB64_URL := https://github.com/gorb314/libb64/archive/refs/tags/$(LIBB64_ZIP)
 
 TEST_DEPENDENCIES := test-dependencies
 
