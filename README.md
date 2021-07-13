@@ -12,7 +12,7 @@ Add base-64 encoding & decoding functions to SQLite3:
 - `cencode.h`, `cencode.c`, `cdecode.h`, `cdecode.c` from <https://github.com/gorb314/libb64> or a fork such as <https://github.com/brodybits/libb64-core> (public domain)
 - `sqlite3.h`
 
-**NOTE:** `cencode.h` must be in the build path.
+**NOTE:** `cencode.h` and `cdecode.h` must be in the build path.
 
 ## Sample usage
 
