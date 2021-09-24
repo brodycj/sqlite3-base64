@@ -17,7 +17,7 @@ void sqlite3_base64(sqlite3_context * context, int argc, sqlite3_value ** argv) 
     // (src/func.c:hexFunc)
     sqlite3_value * first = argv[0];
 
-    const uint8_t * blob = sqlite3_value_blob(first);
+    const char * blob = sqlite3_value_blob(first);
 
     const int blen = sqlite3_value_bytes(first);
 
@@ -48,12 +48,12 @@ void sqlite3_blobfrombase64(
   } else {
     // get the info
     sqlite3_value * first = argv[0];
-    const uint8_t * base64 = sqlite3_value_text(first);
+    const char * base64 = (char *)sqlite3_value_text(first);
 
     const int base64_length = sqlite3_value_bytes(first);
 
     // overestimating length needed is **much** better than underestimating !!
-    const uint8_t * blob = sqlite3_malloc(base64_length);
+    char * blob = sqlite3_malloc(base64_length);
 
     base64_decodestate ds;
     base64_init_decodestate(&ds);
